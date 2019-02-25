@@ -1,24 +1,19 @@
 {
-  "name": "rnwasmtest",
-  "version": "0.0.1",
-  "private": true,
+  "name": "react-native-wasm",
+  "version": "1.0.0",
+  "description": "module that allows running importing and running wasm modules from React Native",
+  "main": "index.js",
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
-    "postinstall": "./fix-rn.sh"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "react": "16.6.3",
-    "react-native": "~0.57",
-    "react-native-webview": "~5.2.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/react-native-wasm.git"
   },
-  "devDependencies": {
-    "babel-jest": "24.1.0",
-    "jest": "24.1.0",
-    "metro-react-native-babel-preset": "0.52.0",
-    "react-test-renderer": "16.6.3"
+  "keywords": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/react-native-wasm/issues"
   },
-  "jest": {
-    "preset": "react-native"
-  }
+  "homepage": "https://github.com/ExodusMovement/react-native-wasm#readme"
 }
