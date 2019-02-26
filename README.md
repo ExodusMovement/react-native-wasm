@@ -9,12 +9,12 @@ A nice second best would be an almost-shim, a la:
 const wasmModule = await WebAssembly.instantiateStreaming('/path/to/assets/somemodule.wasm')
 // use as with WebAssembly, but everything's async
 const result = await wasmModule.instance.exports.doSomething('hi', { blah: 'ho' })
-``` 
+```
 
 ## potential approaches:
 
 - via webview component (will only support async functions)
-- for sync invocations 
+- for sync invocations
   - maybe it's possible to bundle a VM, e.g. https://github.com/perlin-network/life
   - hacks, such as:
     - iOS: workaround/hack via javascript `prompt()` function: https://stackoverflow.com/questions/29249132/wkwebview-complex-communication-between-javascript-native-code/49474323#49474323
@@ -56,7 +56,9 @@ JS-only would be cleanest, but we may need additional control over the WebView, 
 [comlink](https://github.com/GoogleChromeLabs/comlink) module that creates a proxy object that works across postMessage. Will need [proxy-polyfill](https://github.com/GoogleChrome/proxy-polyfill)
 
 wkwebview (not exactly what's needed but could be helpful)
+
 - loading files from doc folder: https://stackoverflow.com/questions/39336235/wkwebview-does-load-resources-from-local-document-folder?rq=1
 - requesting files from doc folder: https://stackoverflow.com/a/49637828 (same as https://stackoverflow.com/a/49638654)
 - allowing wkwebview to access a local file (sort of): https://stackoverflow.com/a/52953127
 - https://stackoverflow.com/questions/51538919/wkwebview-load-files-from-both-bundle-and-document-directory
+- Looks useful: load resources from relative path using local html in uiwebview https://stackoverflow.com/a/8436281
