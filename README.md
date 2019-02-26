@@ -51,7 +51,7 @@ JS-only would be cleanest, but we may need additional control over the WebView, 
   - inline in main bundle, send as base64 via postMessage. This sounds slow. Monero's wasm alone is a >1MB binary.
   - load from native-side (don't know if possible)
 
-## potentially useful tools / models / SO questions
+## potentially useful tools / modules / SO questions
 
 [comlink](https://github.com/GoogleChromeLabs/comlink) module that creates a proxy object that works across postMessage. Will need [proxy-polyfill](https://github.com/GoogleChrome/proxy-polyfill)
 
